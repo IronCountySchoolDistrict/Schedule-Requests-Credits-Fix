@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin 
+	version="1.3"
+	xmlns="http://plugin.powerschool.pearson.com"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	description="Schedule Requests Credits Fix from Aurora Educational Technology"
+	name="Schedule Requests Credits Fix"
+	xsi:schemaLocation="http://plugin.powerschool.pearson.com plugin.xsd"
+>
+	<autoinstall required="true">		
+		<autoredeploy />
+	</autoinstall>
+	<publisher name="Adam P. Larsen">
+		<contact email="adam@auroraedtech.com"/>
+	</publisher>
+</plugin>

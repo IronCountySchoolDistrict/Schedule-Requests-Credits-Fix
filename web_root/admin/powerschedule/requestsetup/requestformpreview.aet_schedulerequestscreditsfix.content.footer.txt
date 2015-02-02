@@ -1,0 +1,26 @@
+<script>
+	$j(document).ready(function()
+		{
+			~[tlist_sql;			
+				select 
+					upper(course_number),
+					credit_hours	
+				from 
+					schedulecoursecatalogs
+					join schedulebuilds on schedulecoursecatalogs.coursecatalogid = schedulebuilds.coursecatalogid 
+				where
+					schedulebuilds.buildid = ~(curbuildid)
+				order by
+					schedulecoursecatalogs.course_number
+			;]
+				for(var i=0; i<courses.length; i++)
+				{
+					if (courses[i].key.toUpperCase() == ("~(course_number)").toUpperCase())
+					{
+						courses[i].credits = "~(credit_hours)";
+					}
+				}
+			[/tlist_sql]
+		}
+	);
+</script>
