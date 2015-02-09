@@ -1,0 +1,28 @@
+<script>
+    $j(document).ready(function() {
+        ~[tlist_sql;
+        select
+        upper(course_number),
+                credit_hours
+        from
+        schedulecoursecatalogs
+        join schedulebuilds on schedulecoursecatalogs.coursecatalogid = schedulebuilds.coursecatalogid
+        where
+        schedulebuilds.buildid = ~(curbuildid)
+        order by
+        schedulecoursecatalogs.course_number
+        ;]
+        for(var i=0; i<courses.length; i++) {
+            if (courses[i].key.toUpperCase() == ("~(course_number)").toUpperCase()) {
+                if ("~(credit_hours)".length > 0) {
+                    try {
+                        courses[i].credits = parseInt("~(credit_hours)");
+                    } catch (e) {
+                        continue;
+                    }
+                }
+            }
+        }
+        [/tlist_sql]
+    });
+</script>
