@@ -9,7 +9,7 @@
 					schedulecoursecatalogs
 					join schedulebuilds on schedulecoursecatalogs.coursecatalogid = schedulebuilds.coursecatalogid 
 				where
-					schedulebuilds.buildid = ~(curbuildid)
+					schedulebuilds.buildid = (select max(buildid) from schedulebuilds where schoolid = ~([students]next_school) and nvl(currentbuild,0) = 1)
 				order by
 					schedulecoursecatalogs.course_number
 			;]
