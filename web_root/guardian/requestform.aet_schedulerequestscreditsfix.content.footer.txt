@@ -1,5 +1,5 @@
 <script>
-	$j(document).ready(function(){
+	$j(document).ready(function() {
 		~[tlist_sql;
 			select
 				upper(course_number),
