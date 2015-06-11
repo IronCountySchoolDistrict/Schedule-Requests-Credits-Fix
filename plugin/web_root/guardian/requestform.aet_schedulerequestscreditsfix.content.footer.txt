@@ -1,0 +1,23 @@
+<script>
+	$j(document).ready(function() {
+		~[tlist_sql;
+			select
+				upper(course_number),
+				credit_hours
+			from
+				schedulecoursecatalogs
+				join schedulebuilds on schedulecoursecatalogs.coursecatalogid = schedulebuilds.coursecatalogid
+			where
+				schedulebuilds.buildid = (select max(buildid) from schedulebuilds where schoolid = ~([students]next_school) and nvl(currentbuild,0) = 1)
+			order by
+				schedulecoursecatalogs.course_number]
+
+			for (var i = 0; i < courses.length; i++) {
+				if (courses[i].key.toUpperCase() == ("~(course_number)").toUpperCase()) {
+					courses[i].credits = Number("~(credit_hours)");
+				}
+			}
+
+		[/tlist_sql]
+	});
+</script>

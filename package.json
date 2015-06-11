@@ -1,0 +1,19 @@
+{
+  "name": "schedule-requests-credits-fix",
+  "version": "1.6.0",
+  "description": "Schedule Requests Credits Fix from Aurora Educational Technology",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IronCountySchoolDistrict/schedule-requests-credits-fix.git"
+  },
+  "author": "IronCountySchoolDistrict",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/IronCountySchoolDistrict/schedule-requests-credits-fix/issues"
+  },
+  "homepage": "https://github.com/IronCountySchoolDistrict/schedule-requests-credits-fix#readme"
+}
